@@ -6,7 +6,7 @@ const Stack = createSharedElementStackNavigator();
 
 const options = {
   headerBackTitleVisible: false,
-  cardStyleInterpolator: ({current: {progress}}) => {
+  cardStyleInterpolator: ({current: {progress}}: any) => {
     return {
       cardStyle: {
         opacity: progress,
