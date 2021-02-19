@@ -15,7 +15,7 @@ export const TravelDetail: React.FC<any> = ({route}) => {
       flex: 1,
     },
   });
-  
+
   return (
     <View style={[styles.container]}>
       <SharedElement
@@ -31,15 +31,18 @@ export const TravelDetail: React.FC<any> = ({route}) => {
           <TouchableOpacity onPress={() => navigation.navigate('Home')}>
             <LeftIcon height={25} width={25} color={'#FFFFFF'} />
           </TouchableOpacity>
-          <Text
-            style={{
-              padding: 10,
-              color: 'white',
-              fontSize: 20,
-              fontWeight: '700',
-            }}>
-            {title}
-          </Text>
+          <SharedElement id={`title.${id}`} style={{width: 500}}>
+            <Text
+              style={{
+                width: 500,
+                padding: 10,
+                color: 'white',
+                fontSize: 20,
+                fontWeight: '700',
+              }}>
+              {title}
+            </Text>
+          </SharedElement>
         </View>
         <View
           style={[{flex: 1, alignItems: 'center', justifyContent: 'center'}]}>

@@ -67,17 +67,19 @@ const Story: React.FC<any> = (props) => {
             source={{uri}}
           />
         </SharedElement>
-        <Text
-          style={{
-            position: 'absolute',
-            bottom: 0,
-            padding: 10,
-            color: 'white',
-            fontSize: 20,
-            fontWeight: '700',
-          }}>
-          {title}
-        </Text>
+        <SharedElement
+          id={`title.${id}`}
+          style={{position: 'absolute', bottom: 0, width: width / 2.5}}>
+          <Text
+            style={{
+              padding: 10,
+              color: 'white',
+              fontSize: 20,
+              fontWeight: '700',
+            }}>
+            {title}
+          </Text>
+        </SharedElement>
       </View>
     </TouchableOpacity>
   );

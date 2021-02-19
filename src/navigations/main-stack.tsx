@@ -32,6 +32,10 @@ export const StackNavigation: React.FC<any> = () => {
               //   resize: 'clip'
               //   align: 'left-top'
             },
+            {
+              id: `title.${id}`,
+              animation: 'fade',
+            },
           ];
         }}
       />
